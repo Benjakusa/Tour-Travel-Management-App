@@ -1,0 +1,37 @@
+.flights-module {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.flights-table-container {
+    background: white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.flights-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.flights-table th,
+.flights-table td {
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.flights-table th {
+    background: #f8fafc;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 0.05em;
+}
+
+.flights-table td svg {
+    color: var(--secondary);
+    display: inline;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}

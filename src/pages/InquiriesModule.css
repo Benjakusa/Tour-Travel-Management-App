@@ -1,0 +1,105 @@
+.inquiries-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inquiry-card-admin {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.inquiry-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.inquiry-body {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.client-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.contact-links span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.service-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+}
+
+.info-value {
+    font-weight: 700;
+    color: var(--secondary);
+    margin-bottom: 0.75rem;
+}
+
+.date-pax {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: var(--text);
+}
+
+.message-box p {
+    font-size: 0.875rem;
+    color: var(--text-light);
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.inquiry-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    outline: none;
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 1024px) {
+    .inquiry-body {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

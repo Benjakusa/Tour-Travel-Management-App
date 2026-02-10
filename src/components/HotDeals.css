@@ -1,0 +1,25 @@
+.hot-deals {
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+}
+
+.deal-badge {
+    background: var(--accent-red);
+    color: var(--white);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .section-header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

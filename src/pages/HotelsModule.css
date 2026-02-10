@@ -1,0 +1,50 @@
+.hotels-module {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.hotels-table-container {
+    background: white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hotels-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hotels-table th,
+.hotels-table td {
+    padding: 1.25rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.hotels-table th {
+    background: #f8fafc;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 0.05em;
+}
+
+.hotel-cell {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hotel-cell img {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.hotels-table td svg {
+    color: var(--text-light);
+    display: inline;
+    vertical-align: middle;
+    margin-right: 0.25rem;
+}

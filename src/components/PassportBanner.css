@@ -1,0 +1,33 @@
+.passport-banner {
+    width: 100%;
+    min-height: 400px;
+    background: linear-gradient(rgba(20, 68, 8, 0.85), rgba(0, 0, 0, 0.85)), url('https://images.unsplash.com/photo-1544016768-982d1554f0b9?auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    margin: 4rem 0;
+}
+
+.passport-content {
+    max-width: 600px;
+}
+
+.passport-content h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.passport-content p {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .passport-banner {
+        text-align: center;
+    }
+}

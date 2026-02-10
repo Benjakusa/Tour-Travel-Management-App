@@ -1,0 +1,88 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Helper to check user document existence and role
+    function getUserData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && getUserData().role == 'admin';
+    }
+
+    function isStaff() {
+      return isAuthenticated() && getUserData().role == 'staff';
+    }
+
+    function isManager() {
+      return isAdmin() || isStaff();
+    }
+
+    // Hero Slides
+    match /hero_slides/{slideId} {
+      allow read: if true;
+      allow write: if isManager();
+    }
+
+    // Packages
+    match /packages/{pkgId} {
+      allow read: if resource.data.status == 'published' || isManager();
+      allow write: if isManager();
+    }
+
+    // Hotels
+    match /hotels/{hotelId} {
+      allow read: if resource.data.status == 'published' || isManager();
+      allow write: if isManager();
+    }
+
+    // Flights
+    match /flights/{flightId} {
+      allow read: if resource.data.status == 'published' || isManager();
+      allow write: if isManager();
+    }
+
+    // Transfers
+    match /transfers/{transferId} {
+      allow read: if resource.data.status == 'published' || isManager();
+      allow write: if isManager();
+    }
+    
+    // Visas
+    match /visas/{visaId} {
+      allow read: if true;
+      allow write: if isManager();
+    }
+
+    // Inquiries
+    match /inquiries/{inquiryId} {
+      allow create: if true;
+      allow read, update, delete: if isManager();
+    }
+
+    // Bookings
+    match /bookings/{bookingId} {
+      allow read, write: if isManager();
+    }
+
+    // User Profiles
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create: if true;
+      allow update: if isAuthenticated() && (request.auth.uid == userId || isAdmin());
+      allow delete: if isAdmin();
+    }
+
+    // Settings
+    match /settings/{settingId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+  }
+}

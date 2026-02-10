@@ -1,0 +1,135 @@
+.bookings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.booking-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.booking-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.booking-status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.booking-status.upcoming {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.booking-status.completed {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.booking-id {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.booking-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.booking-section {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    color: var(--text);
+}
+
+.booking-section svg {
+    color: var(--text-light);
+    margin-top: 0.2rem;
+}
+
+.booking-section h4 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.booking-section p {
+    font-size: 0.875rem;
+    color: var(--text-light);
+}
+
+.payment-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.total-price {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--primary);
+}
+
+.payment-status {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+.payment-status.paid {
+    color: #10b981;
+}
+
+.payment-status.partial {
+    color: #f59e0b;
+}
+
+.booking-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.875rem;
+}
+
+.balance-info strong.debt {
+    color: #ef4444;
+}
+
+.balance-info strong.clear {
+    color: #10b981;
+}
+
+.no-bookings {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem;
+    background: white;
+    border-radius: 1.5rem;
+    color: var(--text-light);
+}

@@ -1,0 +1,85 @@
+.visa-card {
+    background: var(--white);
+    padding: 2rem 1.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--gray-100);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.visa-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-lg);
+}
+
+.visa-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gray-50);
+    color: var(--primary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.visa-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+}
+
+.visa-type {
+    color: var(--gray-500);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.visa-details {
+    margin-bottom: 2rem;
+    text-align: left;
+    background: var(--gray-50);
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+
+.visa-price-row,
+.visa-time-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.visa-time-row {
+    margin-bottom: 0;
+}
+
+.visa-details .label {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    font-weight: 600;
+}
+
+.visa-details .value {
+    font-size: 0.85rem;
+    color: var(--black);
+    font-weight: 700;
+}
+
+.visa-details .visa-price-row .value {
+    color: var(--primary);
+}
+
+@media (min-width: 768px) {
+    .visa-card {
+        padding: 2.5rem 2rem;
+    }
+}

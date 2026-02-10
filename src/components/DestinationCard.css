@@ -1,0 +1,122 @@
+.dest-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gray-100);
+}
+
+.dest-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.dest-image-container {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.dest-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.dest-card:hover .dest-image-container img {
+    transform: scale(1.1);
+}
+
+.hot-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--accent-red);
+    color: var(--white);
+    padding: 0.4rem 0.8rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    z-index: 5;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    box-shadow: var(--shadow);
+}
+
+.dest-info {
+    padding: 1.25rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dest-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--black);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.dest-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    color: var(--gray-500);
+    font-size: 0.85rem;
+}
+
+.dest-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.dest-footer {
+    margin-top: auto;
+}
+
+.dest-price {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.price-label {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.price-amount {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .dest-info {
+        padding: 1rem;
+    }
+
+    .dest-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .price-amount {
+        font-size: 1.25rem;
+    }
+}
